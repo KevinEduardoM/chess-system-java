@@ -13,9 +13,16 @@ public class Position {
 		return column;
 	}
 
+	public void setColumn(int column) {
+		this.column = column;
+	}
 
 	public int getRow() {
 		return row;
+	}
+	
+	public void setRow(int r) {
+		this.row=r;
 	}
 
 
@@ -24,5 +31,9 @@ public class Position {
 		return "Position " + column + ", " + row;
 	}
 	
+	public void setValue(int row,int column) {
+		this.row=row;
+		this.column=column;
+	}
 	
 }

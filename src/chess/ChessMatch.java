@@ -34,9 +34,16 @@ public class ChessMatch {
 		Position source = sourcePosition.toPosition();
 		Position target = targetPosition.toPosition();
 		
+		validateTargetPosition(source, target);
 		validateSourcePosition(source);
 		Piece capturedPiece = makeMove(source,target);
 		return (ChessPiece) capturedPiece;
+	}
+	
+	private void validateTargetPosition(Position sourcePosition,Position targetPosition) {
+		if(!board.piece(sourcePosition).possibleMove(targetPosition)) {
+			throw new ChessException("The chonsen piece cant move for to target postions");
+		}
 	}
 	
 	private void validateSourcePosition(Position sourcePosition) {
