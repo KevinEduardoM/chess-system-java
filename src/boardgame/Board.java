@@ -16,6 +16,7 @@ public class Board {
 		}
 		this.rows = rows;
 		this.collumns = collumns;
+		// teste pieces = new Piece[rows][collumns];
 		pieces = new Piece[collumns][rows];
 	}
 

@@ -42,9 +42,21 @@ public class ChessMatch {
 	
 	private void validateTargetPosition(Position sourcePosition,Position targetPosition) {
 		if(!board.piece(sourcePosition).possibleMove(targetPosition)) {
-			throw new ChessException("The chonsen piece cant move for to target postions");
+			throw new ChessException("The chonsen piece cant move for to target position");
 		}
 	}
+	
+	public boolean[][] possibleMoves(ChessPosition source){
+		Position p = source.toPosition();
+		validateSourcePosition(p);
+		return board.piece(p).possibleMoves();
+	}
+	
+	//public boolean[][] possibleMoves(ChessPosition sourcePosition) {
+	//	Position position = sourcePosition.toPosition();
+		//validateSourcePosition(position);
+		//return board.piece(position).possibleMoves();
+	//}
 	
 	private void validateSourcePosition(Position sourcePosition) {
 		if(!board.thereIsAPiece(sourcePosition)) {
