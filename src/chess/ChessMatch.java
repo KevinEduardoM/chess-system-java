@@ -79,10 +79,16 @@ public class ChessMatch {
 		placeNewPiece('h',8,new Rook (board,Color.BLACK));
 		placeNewPiece('e',8,new King (board,Color.BLACK));
 		
+		
 		placeNewPiece('e',1,new King (board,Color.WHITE));
 		placeNewPiece('a',1,new Rook (board,Color.WHITE));
 		placeNewPiece('h',1,new Rook (board,Color.WHITE));
-		//board.placePiece(new Rook (board,Color.BLACK), new Position(0,0));
+		
+		board.placePiece(new Rook (board,Color.WHITE), new Position(4,6));
+		board.placePiece(new Rook (board,Color.WHITE), new Position(5,6));
+		board.placePiece(new Rook (board,Color.WHITE), new Position(3,6));
+		board.placePiece(new Rook (board,Color.WHITE), new Position(3,7));
+		board.placePiece(new Rook (board,Color.WHITE), new Position(5,7));
 		//board.placePiece(new Rook (board,Color.BLACK), new Position(7,0));
 		//board.placePiece(new King (board,Color.WHITE), new Position(4,0));
 		//board.placePiece(new King (board,Color.WHITE), new Position(4,7));
