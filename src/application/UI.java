@@ -56,6 +56,16 @@ public class UI {
 		System.out.println();
 		System.out.println("Turn: "+ match.getTurn());
 		System.out.println("Waiting player: " + match.getCurrentPlayer());
+		
+		System.out.println("checando check!!!");
+		 	if(match.getCheck()) {
+		 		System.out.println("check!!!");
+		 		System.out.println("check!!!"); 
+		 		System.out.println("check!!!"); 
+		 		System.out.println("check!!!"); 
+		 	}else {
+		 		System.out.println("checou o check e não rolou!!!");
+		 	}
 	}
 	
 	public static void printBoard(ChessPiece[][] pieces) {
@@ -80,9 +90,9 @@ public class UI {
 			
 		}else {
 			if(piece.getColor()==Color.BLACK){
-				System.out.print(ANSI_GREEN + piece + ANSI_RESET);
+				System.out.print(ANSI_PURPLE + piece + ANSI_RESET);
 			}else {
-				System.out.print(ANSI_BLUE + piece + ANSI_RESET);
+				System.out.print(ANSI_WHITE + piece + ANSI_RESET);
 			}
 		}
 		System.out.print(" ");

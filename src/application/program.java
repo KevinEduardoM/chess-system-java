@@ -23,13 +23,13 @@ public class program {
 		
 			while(true) {
 				try {
-					 UI.clearScreen();
+					 //UI.clearScreen();
 					 UI.printMatch(match,captured);
 					 System.out.print("Source: ");
 					 ChessPosition source = UI.readChessPosition(sc);
 					 
 					 boolean[][] possibleMoves= match.possibleMoves(source);
-					 UI.clearScreen();
+					 //UI.clearScreen();
 					 UI.printBoard(match.getPieces(),possibleMoves);
 					 System.out.println();
 					 System.out.print("Target: ");
